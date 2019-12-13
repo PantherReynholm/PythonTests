@@ -1,6 +1,7 @@
 from text_processor import process_test_text, create_series_of_words, form_input_matrix
 from keras.preprocessing.text import Tokenizer
 from keras.models import model_from_json
+import numpy as np
 
 
 json_file = open('model.json', 'r')
@@ -19,14 +20,19 @@ nn_input_matrix, category_number = form_input_matrix(tokenized_text)
 predicted_classes = loaded_model.predict_classes(nn_input_matrix)
 
 word_dict = dict((v, k) for k, v in number_to_word.items())
-print(word_dict[predicted_classes[0]])
 
 """take in 60 words, predict new word, append this new word, predict with these 60 new words and repeat"""
 
-first_59_words = nn_input_matrix[0]
-print(first_59_words)
-predicted_paragraph =[]
+first_59_words = nn_input_matrix[:2]
+predicted_paragraph = list(np.squeeze(first_59_words[0]))
 for i in range(100):
-    new_word = loaded_model.predict_classes(first_59_words[i: i + 59])
-    first_59_words.append(word_dict[new_word])
-print(first_59_words)
+    new_word = loaded_model.predict_classes(first_59_words)
+    print(new_word[0])
+    reshaped_entry = first_59_words[0][1:]
+    new_sentence = np.vstack([reshaped_entry, [new_word[0]]])
+    first_59_words[0] = new_sentence
+    predicted_paragraph.append(new_word[0])
+print(predicted_paragraph)
+
+story = [word_dict[i] for i in predicted_paragraph]
+print(story)
