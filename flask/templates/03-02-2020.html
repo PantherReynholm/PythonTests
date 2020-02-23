@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/dca6bfdd72.js"></script>
+        <link href="CSS/formatter.css" rel="stylesheet">
+        <title>My Workout Planner</title>
+        <script src="JS/jquery-3.4.1.min.js"></script>
+        <script src="JS/jqueryformatter.js"></script>
+    </head>
+    <div id="header">
+    <ul class="headerbanner">
+        <div class="navigatorcontainer">
+            <li class="headerbanner"><a href="home.html" class="bannerlinks">
+                <i class="fas fa-home" style="padding: 4px;"></i>Home</a></li>
+        </div>
+
+        <div id="workoutDropDown">
+            <div class="navigatorcontainer"> 
+                <li class="headerbanner"><a class="bannerlinks">
+                    <i class="fas fa-dumbbell" style="padding: 4px;"></i>Workout Planner</a></li>
+                <div id="workoutDropDownContent">
+                    <li class="dropdownli"><a class="bannerlinks" href="28-01-2020.html">28/01/2019</a></li>
+                    <li class="dropdownli"><a class="bannerlinks" href="29-01-2020.html">29/01/2019</a></li>
+                    <li class="dropdownli"><a class="bannerlinks" href="31-01-2020.html">31/01/2019</a></li>
+                    <li class="dropdownli"><a class="bannerlinks" href="03-02-2020.html">03/02/2019</a></li>
+                </div>
+            </div>
+        </div>  
+    </ul>
+    </div>
+    <body>
+        <div id="divtable">
+            <table id="workout-table">
+                <tr style="border-bottom: black;">
+                    <th>Day</th>
+                    <th>Group</th>
+                    <th>Workout</th>
+                    <th>Reps</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td rowspan="19" style="text-align: center;">03/02/2020</td>
+                    <td rowspan="3" style="text-align: center;">Chest</td>
+                    <td >Alternate Dumbell Bench Press</td>
+                    <td>20, 15</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td>Diamond Push Ups</td>
+                    <td></td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td>One Arm Dumbell Flys</td>
+                    <td></td>
+                    <td class="comment"></td> 
+                </tr>
+                <tr>
+                    <td rowspan="2" style="text-align: center;">Back</td>
+                    <td >Bent Over Dumbell Row</td>
+                    <td>12, 10</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td >Dumbell Deadlift</td>
+                    <td></td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="text-align: center;">Shoulders</td>
+                    <td >Arnould Press</td>
+                    <td>15, 10</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td >Upright Row</td>
+                    <td>20, 20</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="1" style="text-align: center;">Glute</td>
+                    <td >Weighted Glute Bridge</td>
+                    <td>20, 20</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="text-align: center;">Quads</td>
+                    <td >Lunge</td>
+                    <td class="comment">20, 20</td>
+                </tr>
+                <tr>
+                    <td >Squat</td>
+                    <td>20, 20</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="1" style="text-align: center;">Biceps</td>
+                    <td >Alternate Dumbell Curl</td>
+                    <td>12, 12</td>
+                    <td class="comment">Pumped</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" style="text-align: center;">Tricep</td>
+                    <td >Tricep Extension With Pause</td>
+                    <td >15, 15</td>
+                    <td class="comment">Too Easy</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" style="text-align: center;">Forearm</td>
+                    <td >One Arm Seated Dumbell Curl</td>
+                    <td>15, 14</td>
+                    <td class="comment">Hard, but feel better</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" style="text-align: center;">Neck</td>
+                    <td >Neck Extension</td>
+                    <td>12, 12, 12</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3" style="text-align: center;">Abs</td>
+                    <td >Bicycle Crunch</td>
+                    <td>12, 15</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td >Toe Touches</td>
+                    <td>12, 12</td>
+                    <td class="comment"></td>
+                </tr>
+                <tr>
+                    <td >Butt Raises</td>
+                    <td>12, 12</td>
+                    <td class="comment"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="notes">
+            <h3 style="margin: 5px; text-decoration: underline;">Notes:</h3>
+            <p style="margin: 5px;">Increased the number of sets and resps in a few movements, however did not fully complete the
+                workout.
+            </p>
+        </div>
+    </body>
+</html>
